@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Scaling Up Advisor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h1>AI Scaling Up Advisor</h1>
+      <div id="userBar" class="hidden" style="display:flex; gap:8px; align-items:center;">
+        <span id="userEmail" class="badge"></span>
+        <button id="btnLogout" style="background:#ef4444; color:#fff;">Salir</button>
+      </div>
+    </div>
+
+    <section id="auth">
+      <h2>Acceso</h2>
+      <input id="email" type="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Contraseña" />
+      <button id="btnRegister">Registrarse</button>
+      <button id="btnLogin">Entrar</button>
+      <p id="authMsg"></p>
+    </section>
+
+    <section id="onboarding" class="hidden">
+      <h2>Diagnóstico</h2>
+      <div id="intro"></div>
+      <button id="btnStart">Iniciar diagnóstico</button>
+    </section>
+
+    <section id="sessions" class="hidden">
+      <h2>Mis sesiones</h2>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+        <select id="sessionSelect" style="min-width:260px; padding:8px; background:#0b1220; color:#e2e8f0; border:1px solid #334155; border-radius:6px;"></select>
+        <button id="btnSelectSession">Continuar</button>
+        <button id="btnNewSession">Nueva sesión</button>
+        <button id="btnRefreshSessions" style="background:#38bdf8;">Actualizar</button>
+      </div>
+      <div id="sessionsError" style="margin-top:8px; color:#94a3b8; font-size:12px;"></div>
+      <div id="sessionsList" class="sessions" style="margin-top:10px;"></div>
+    </section>
+
+    <section id="chat" class="hidden">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+        <h3 style="margin:0; font-size:16px; color:#38bdf8;">Chat diagnóstico</h3>
+        <button id="btnBack" style="background:#334155; color:#e2e8f0;">Volver</button>
+      </div>
+      <div id="qa"></div>
+      <div class="input-row">
+        <input id="answerBox" placeholder="Escribe tu respuesta o selecciona..." />
+        <button id="btnSend">Enviar</button>
+      </div>
+    </section>
+
+    <section id="results" class="hidden">
+      <h2>Resumen rápido</h2>
+      <div id="quickSummary" style="background:#1e293b; padding:12px; border:1px solid #334155; border-radius:8px; font-size:14px; line-height:1.4; color:#e2e8f0;">
+        <em>Completa algunas preguntas y presiona "Refrescar resumen" para ver un diagnóstico compacto.</em>
+      </div>
+      <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+        <button id="btnResultsBack" style="background:#334155; color:#e2e8f0;">Volver</button>
+        <button id="btnRefreshSummary" style="background:#38bdf8; color:#0f172a;">Refrescar resumen</button>
+        <button id="btnReport">Generar informe final (PDF)</button>
+      </div>
+      <div id="reportPreview" style="margin-top:18px;"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

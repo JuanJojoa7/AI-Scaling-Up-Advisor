@@ -1,0 +1,10 @@
+[
+  {"id": "p1", "module": "people", "text": "¿Tienes definidos roles y responsabilidades claros para cada miembro del equipo?", "type": "multi", "options": ["No", "Parcial", "Sí"], "best": "Sí", "weight": 1},
+  {"id": "p2", "module": "people", "text": "Describe brevemente la cultura de tu empresa.", "type": "text", "weight": 1, "min_chars": 40},
+  {"id": "s1", "module": "strategy", "text": "¿Tu empresa tiene un BHAG claramente comunicado? (0-10)", "type": "number", "min": 0, "max": 10, "weight": 1},
+  {"id": "s2", "module": "strategy", "text": "Describe tu propuesta de valor única.", "type": "text", "weight": 1, "min_chars": 50},
+  {"id": "e1", "module": "execution", "text": "¿Con qué frecuencia realizan reuniones de seguimiento (ritmo diario/semanal)?", "type": "multi", "options": ["Nunca", "Mensual", "Semanal", "Diaria"], "best": "Diaria", "weight": 1},
+  {"id": "e2", "module": "execution", "text": "¿Cuántos KPIs clave monitorean regularmente? (0-10)", "type": "number", "min": 0, "max": 10, "weight": 1},
+  {"id": "c1", "module": "cash", "text": "¿Tienes proyección de flujo de caja de 3-6 meses?", "type": "multi", "options": ["No", "Parcial", "Sí"], "best": "Sí", "weight": 1},
+  {"id": "c2", "module": "cash", "text": "Describe brevemente cómo mejoras tu ciclo de conversión de efectivo.", "type": "text", "weight": 1, "min_chars": 50}
+]
